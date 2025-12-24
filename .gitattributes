@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import requests
+
+url = "http://192.168.139.42:5000/run"
+
+
+
+data={
+    "cmd": "ls"
+}
+
+response=requests.post(url,json=data)
+print(response.text)
